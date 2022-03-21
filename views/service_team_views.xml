@@ -1,0 +1,43 @@
+<!-- Nomor 5 -->
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- service.team tree view -->
+    <record id="service_team_view_tree" model="ir.ui.view">
+        <field name="name">Service Team Tree</field>
+        <field name="model">service.team</field>
+        <field name="arch" type="xml">
+            <tree string="service_team_tree">
+                <!-- Add your fields here -->
+                <field name="name"/>
+                <field name="team_leader"/>
+                <field name="team_members"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- service.team form view -->
+    <record id="service_team_view_form" model="ir.ui.view">
+        <field name="name">Service Team Form</field>
+        <field name="model">service.team</field>
+        <field name="arch" type="xml">
+            <form string="service_team_form">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="name"/>
+                        <field name="team_leader"/>
+                        <field name="team_members" widget="many2many_tags"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- service.team action window -->
+    <record id="service_team_action" model="ir.actions.act_window">
+        <field name="name">Service Team</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">service.team</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

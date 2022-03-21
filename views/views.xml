@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="review-booking-order-odoo14.list">
+      <field name="name">review-booking-order-odoo14 list</field>
+      <field name="model">review-booking-order-odoo14.review-booking-order-odoo14</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="review-booking-order-odoo14.action_window">
+      <field name="name">review-booking-order-odoo14 window</field>
+      <field name="res_model">review-booking-order-odoo14.review-booking-order-odoo14</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="review-booking-order-odoo14.action_server">
+      <field name="name">review-booking-order-odoo14 server</field>
+      <field name="model_id" ref="model_review-booking-order-odoo14_review-booking-order-odoo14"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="review-booking-order-odoo14" id="review-booking-order-odoo14.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="review-booking-order-odoo14.menu_1" parent="review-booking-order-odoo14.menu_root"/>
+    <menuitem name="Menu 2" id="review-booking-order-odoo14.menu_2" parent="review-booking-order-odoo14.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="review-booking-order-odoo14.menu_1_list" parent="review-booking-order-odoo14.menu_1"
+              action="review-booking-order-odoo14.action_window"/>
+    <menuitem name="Server to list" id="review-booking-order-odoo14" parent="review-booking-order-odoo14.menu_2"
+              action="review-booking-order-odoo14.action_server"/>
+-->
+  </data>
+</odoo>
