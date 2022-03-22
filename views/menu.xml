@@ -1,11 +1,12 @@
-<!-- Nomor 4 -->
 <?xml version='1.0' encoding='utf-8'?>
 <odoo>
+    <!-- Nomor 4 -->
     <!-- a -->
     <!-- This Menu Item Must have a parent -->
-    <menuitem id="booking_main" name="Booking" parent="sale.sale_menu_root" sequence="8"/>
+    <menuitem id="booking_main" name="Booking" parent="sale.sale_menu_root" sequence="0"/>
 
     <!-- Sub Menu -->
     <menuitem id="booking_order_menu" name="Booking Order" action="sale_order_action" parent="booking_main" sequence="1"/>
-    <menuitem id="service_team_menu" name="Service Team" action="service_team_action" parent="booking_main" sequence="1"/>
+    <menuitem id="work_order_menu" name="Work Order" action="work_order_action" parent="booking_main" sequence="2"/>
+    <menuitem id="service_team_menu" name="Service Team" action="service_team_action" parent="booking_main" sequence="3"/>
 </odoo>

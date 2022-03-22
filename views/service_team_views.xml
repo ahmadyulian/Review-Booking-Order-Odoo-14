@@ -1,6 +1,6 @@
-<!-- Nomor 5 -->
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <!-- Nomor 5 -->
     <!-- service.team tree view -->
     <record id="service_team_view_tree" model="ir.ui.view">
         <field name="name">Service Team Tree</field>

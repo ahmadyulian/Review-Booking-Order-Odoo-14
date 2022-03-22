@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <!-- Nomor 7B -->
+    <!-- work.order tree view -->
+    <record id="work_order_view_tree" model="ir.ui.view">
+        <field name="name">Work Order Tree</field>
+        <field name="model">work.order</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="wo_number"/>
+                <field name="bo_references"/>
+                <field name="team"/>
+                <field name="team_leader"/>
+                <field name="team_members"/>
+                <field name="planned_start"/>
+                <field name="planned_end"/>
+                <field name="date_start"/>
+                <field name="date_end"/>
+                <field name="note"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- work.order form view -->
+    <record id="work_order_view_form" model="ir.ui.view">
+        <field name="name">Work Order Form</field>
+        <field name="model">work.order</field>
+        <field name="arch" type="xml">
+            <form string="work_order_form">
+                <sheet>
+                    <group name="name" string="Work Order Form">
+                        <group>
+                            <!-- Add your fields here -->
+                            <field name="wo_number"/>
+                            <field name="bo_references"/>
+                            <field name="team"/>
+                            <field name="team_leader"/>
+                            <field name="team_members" widget="many2many_tags"/>
+                        </group>
+                        
+                        <group>
+                            <!-- Add your fields here -->
+                            <field name="planned_start"/>
+                            <field name="planned_end"/>
+                            <field name="date_start"/>
+                            <field name="date_end"/>
+                        </group>
+                    </group>
+                    
+                    <notebook>
+                        <page name="note" string="Note">
+                            <field name="note"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- Nomor 7B sampai sini -->
+
+    <!-- work.order action window -->
+    <record id="work_order_action" model="ir.actions.act_window">
+        <field name="name">Work Order</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">work.order</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
